@@ -58,7 +58,7 @@ public class StringSeriesMain {
             Thread curThread = new Thread(() -> {
                 b.append(idx);
                 c.append(idx);
-            });
+            }, "curThreadName" + i);
             threadList.add(curThread);
             curThread.start();
         }

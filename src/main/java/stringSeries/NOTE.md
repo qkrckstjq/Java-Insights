@@ -59,4 +59,8 @@ public synchronized StringBuffer delete(int start, int end) {
     return this;
 }
 ```
-실제 메소드에 Syncronized 차이가 있다.
+실제 메소드에 Syncronized가 붙어있다.
+
+![제목 없음.png](..%2F..%2F..%2F..%2F..%2F..%2F%EC%A0%9C%EB%AA%A9%20%EC%97%86%EC%9D%8C.png)
+
+디버깅 결과 실제로도 수동으로 지정한 스레드 curThreadName0이 StringBuffer로 부터 lock을 얻은 상태이다.
