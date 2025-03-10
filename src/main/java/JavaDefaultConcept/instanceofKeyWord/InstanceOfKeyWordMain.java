@@ -13,10 +13,10 @@ public class InstanceOfKeyWordMain {
     }
 
     private static void SoundInstanceOf(Animal animal) {
-        if (animal instanceof Dog) {
-            System.out.println("멍멍");
-        } else if (animal instanceof Cat) {
-            System.out.println("냐옹");
+        if (animal instanceof Dog dog) {
+            dog.sound();
+        } else if (animal instanceof Cat cat) {
+            cat.sound();
         }
     }
 
