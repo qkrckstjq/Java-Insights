@@ -1,4 +1,4 @@
-package PrimitiveReference;
+package primitiveReference;
 
 public class PrimitiveReferenceMain {
     public static void main(String[] args) {
