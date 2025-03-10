@@ -1,4 +1,4 @@
-package stringSeries;
+package JavaDefaultConcept.stringSeries;
 
 import java.util.ArrayList;
 import java.util.List;

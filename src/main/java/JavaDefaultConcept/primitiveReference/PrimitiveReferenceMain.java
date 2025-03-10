@@ -1,4 +1,4 @@
-package primitiveReference;
+package JavaDefaultConcept.primitiveReference;
 
 public class PrimitiveReferenceMain {
     public static void main(String[] args) {

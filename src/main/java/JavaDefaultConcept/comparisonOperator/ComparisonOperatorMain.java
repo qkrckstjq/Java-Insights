@@ -1,4 +1,4 @@
-package comparisonOperator;
+package JavaDefaultConcept.comparisonOperator;
 
 public class ComparisonOperatorMain {
     public static void main(String[] args) {

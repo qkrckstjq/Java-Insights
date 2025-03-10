@@ -1,4 +1,4 @@
-package statickeyword;
+package JavaDefaultConcept.statickeyword;
 
 public class StaticKeyWordMain {
     public static void main(String[] args) {
