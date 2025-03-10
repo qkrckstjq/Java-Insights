@@ -1,22 +1,26 @@
 package JavaDefaultConcept.instanceofKeyWord;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class InstanceOfKeyWordMain {
     public static void main(String[] args) {
-        List<Object> objectList = new ArrayList<>();
+        Animal dog = new Dog();
+        Animal cat = new Cat();
 
-        String objectA = new String("test");
-        Integer objectB = 10;
+        SoundInstanceOf(dog);
+        SoundInstanceOf(cat);
 
-        objectList.add(objectA);
-        objectList.add(objectB);
+        SoundInterface(dog);
+        SoundInterface(cat);
+    }
 
-        for(Object object : objectList) {
-            if (object instanceof String string) {
-                System.out.println(string);
-            }
+    private static void SoundInstanceOf(Animal animal) {
+        if (animal instanceof Dog) {
+            System.out.println("멍멍");
+        } else if (animal instanceof Cat) {
+            System.out.println("냐옹");
         }
+    }
+
+    private static void SoundInterface(Animal animal) {
+        animal.sound();
     }
 }
