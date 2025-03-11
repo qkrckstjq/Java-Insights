@@ -6,7 +6,7 @@
 
 ### 1️⃣ Java 기본 개념 & 문법<br>
 
-- Primitive Type과 Reference Type의 차이점<br>
+- Primitive Type과 Reference Type의 차이점<br> 
 - == 연산자와 .equals() 메서드의 차이<br>
 - String, StringBuilder, StringBuffer의 차이<br>
 - static 키워드의 의미와 활용 예제<br>
