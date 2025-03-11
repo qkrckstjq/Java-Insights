@@ -1,4 +1,4 @@
-package JavaDefaultConcept.boxing;
+package JavaDefaultConcept.AutoUnBox;
 
 public class BoxingMain {
     public static void main(String[] args) {
