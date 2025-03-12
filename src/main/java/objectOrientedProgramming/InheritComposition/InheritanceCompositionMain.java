@@ -3,6 +3,8 @@ package objectOrientedProgramming.InheritComposition;
 import objectOrientedProgramming.InheritComposition.composition.CompositionBird;
 import objectOrientedProgramming.InheritComposition.inheritance.InheritanceBird;
 
+import java.util.Stack;
+
 public class InheritanceCompositionMain {
     public static void main(String[] args) {
         InheritanceBird inheritanceBird = new InheritanceBird();
@@ -10,5 +12,9 @@ public class InheritanceCompositionMain {
 
         inheritanceBird.eat();
         compositionBird.eat();
+
+        Stack<Integer> stack = new Stack<>();
+        stack.push(1);
+        stack.add(1);
     }
 }
