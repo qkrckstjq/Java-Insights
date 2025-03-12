@@ -3,6 +3,7 @@ package objectOrientedProgramming.InheritComposition;
 import objectOrientedProgramming.InheritComposition.composition.CompositionBird;
 import objectOrientedProgramming.InheritComposition.inheritance.InheritanceBird;
 
+import java.io.IOException;
 import java.util.Stack;
 
 public class InheritanceCompositionMain {
