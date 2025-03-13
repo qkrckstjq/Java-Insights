@@ -2,6 +2,8 @@ package objectOrientedProgramming.equalsAndHashCode.equals;
 
 import objectOrientedProgramming.equalsAndHashCode.Person;
 
+import java.util.Objects;
+
 public class EqualsMain {
     public static void main(String[] args) {
         Person p1 = new Person("hi");
