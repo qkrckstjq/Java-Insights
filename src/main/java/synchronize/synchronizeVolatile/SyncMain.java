@@ -1,6 +1,6 @@
 package synchronize.synchronizeVolatile;
 
-public class Main {
+public class SyncMain {
     private static int a = 0;
     private static int b = 0;
 
@@ -27,7 +27,7 @@ public class Main {
     public static void countWithSync() {
         Thread thread = new Thread(() -> {
             for(int i = 0; i < 5000; i++) {
-                synchronized (Main.class) {
+                synchronized (SyncMain.class) {
                     b++;
                 }
             }
