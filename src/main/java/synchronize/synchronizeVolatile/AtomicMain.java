@@ -1,5 +1,6 @@
 package synchronize.synchronizeVolatile;
 
+import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class AtomicMain {

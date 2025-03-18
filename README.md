@@ -38,7 +38,8 @@
 - PriorityQueue와 일반 Queue의 차이<br>
 - WeakHashMap의 개념과 사용 시기<br>
 - HashMap에서 equals()와 hashCode()를 재정의하지 않았을 때 문제점<br>
-- Collections.synchronizedList()와 CopyOnWriteArrayList의 차이<br><br>
+- Collections.synchronizedList()와 CopyOnWriteArrayList의 차이<br>
+- streamAPI와 일반 반복문의 차이점<br><br>
 
 ### 4️⃣ Java 예외 처리<br>
 - Checked Exception과 Unchecked Exception의 차이<br>
