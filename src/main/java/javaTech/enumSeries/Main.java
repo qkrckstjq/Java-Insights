@@ -1,4 +1,4 @@
-package javaDefaultConcept.enumSeries;
+package javaTech.enumSeries;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package javaDefaultConcept.enumSeries;
+package javaTech.enumSeries;
 
 import java.util.HashMap;
 import java.util.Map;
