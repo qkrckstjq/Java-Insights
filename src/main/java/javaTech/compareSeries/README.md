@@ -90,3 +90,7 @@ people.sort(ageComparator.thenComparing(nameComparator));
 | 기본 정렬 가능 | O          | O          |
 | 여러 기준 정렬 가능 | X          | O          |
 | 클래스 내부 수정 필요 | O          | X          |
+
+Comparable → 객체가 스스로 "나는 이렇게 정렬될 거야"
+
+Comparator → "이 객체들을 이 기준으로 정렬해줘"
