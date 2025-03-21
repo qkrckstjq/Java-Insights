@@ -8,6 +8,8 @@ JVM은 Java Virtual Machine으로 자바 언어의 장점중 하나인 다양한
 ## 구성 요소
 JVM은 다음과 같은 요소로 구성되어있다.
 
+---
+
 ### Class Loader
 Class Loader는 javac가 .class로 만든 클래스파일을 JVM으로 로드하고 링크 및 초기화 작업을 수행합니다.
 
@@ -25,6 +27,8 @@ Class Loader는 javac가 .class로 만든 클래스파일을 JVM으로 로드하
 3. 초기화(initialization)
 - static 변수 초기화 및 static 블록 실행.
 
+---
+
 ### Runtime Data Area
 JVM이 프로그램을 실행하는 동안 사용하는 메모리 영역
 
@@ -39,6 +43,8 @@ JVM이 프로그램을 실행하는 동안 사용하는 메모리 영역
 >**Native Method Stack** <br>
 >네이티브 메소드(C, C++) 호출 시 사용되는 스택
 
+---
+
 ### Execution Engine
 JVM의 핵심 컴포넌트로, 바이트코드(.class파일)를 기계어로 변환하여 실행합니다.
 
@@ -48,8 +54,12 @@ JVM의 핵심 컴포넌트로, 바이트코드(.class파일)를 기계어로 변
 
 **Garbage Collector** : 힙 영역의 참조되지 않는 객체를 정리
 
+---
+
 ### Native Method Interface (네이티브 메서드 인터페이스)
 자바 코드에서 C, C++ 같은 네이티브 코드를 호출할 수 있도록 돕는 인터페이스
+
+---
 
 ### Native Method Library
 네이티브 메서드의 구현 라이브러리.
