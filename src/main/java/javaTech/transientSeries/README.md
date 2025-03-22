@@ -2,7 +2,7 @@
 
 **transient** 키워드는 변수 앞에 적을 수 있는 키워드로
 
-해당 키워드가 붙은 변수는 Serializable인터페이스를 구현한 클래스가 직렬화를 시도할때 직렬화의 대상이 되지 않습니다.
+해당 키워드가 붙은 변수는 Serializable인터페이스를 구현한 클래스(Jackson의 ObjectMapper는 Serialize인터페이스 구현)가 직렬화를 시도할때 직렬화의 대상이 되지 않습니다.
 
 ```java
 public class Person {

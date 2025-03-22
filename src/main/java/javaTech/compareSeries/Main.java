@@ -12,7 +12,7 @@ public class Main {
         people.add(new Person("김향기", 25));
         people.add(new Person("나선지", 35));
 
-//        Collections.sort(people);
+        Collections.sort(people);
         Comparator<Person> ageComparator = Comparator.comparing(Person::getAge);
         Comparator<Person> nameComparator = Comparator.comparing(Person::getName);
 //        people.sort(Comparator.comparing(Person::getAge));
