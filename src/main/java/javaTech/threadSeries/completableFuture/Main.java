@@ -36,18 +36,18 @@ public class Main {
         }
     }
 
-    public static CompletableFuture<Void> getHtml(String url, HttpClient client, int idx) {
+    public static CompletableFuture<Void> getHtml(String url, HttpClient client, int idx, ExecutorService service) {
         HttpRequest request = HttpRequest.newBuilder(URI.create(url)).GET().build();
         return client
                 .sendAsync(request, HttpResponse.BodyHandlers.ofString())
-                .handle((res, err) -> {
+                .handleAsync((res, err) -> {
                     if (err != null || res == null || res.statusCode() != 200) {
                         makeHtmlFile(idx, "FAILED");
                     } else {
                         makeHtmlFile(idx, res.body());
                     }
                     return null;
-                });
+                }, service);
     }
 
     public static Runnable process(HashMap<Integer, String> urlMap) {
@@ -62,12 +62,19 @@ public class Main {
                     .forEach((entry) -> {
                         Integer key = entry.getKey();
                         String value = entry.getValue();
-                        CompletableFuture<Void> result = getHtml(value, client, key)
-                                .thenRunAsync(() -> {}, service);
-                        futures.add(result);
-                        if(futures.size() % 100 == 0) {
-                            CompletableFuture.allOf(futures.toArray(new CompletableFuture[0])).join();
-                            futures.clear();
+                        CompletableFuture<Void> result = getHtml(value, client, key, service);
+
+                        List<CompletableFuture<Void>> batchToJoin = null;
+                        synchronized (futures) {
+                            futures.add(result);
+                            if (futures.size() % 100 == 0) {
+                                // 리스트의 snapshot을 만들어 동기화 블록 외부에서 join() 수행
+                                batchToJoin = new ArrayList<>(futures);
+                                futures.clear();
+                            }
+                        }
+                        if (batchToJoin != null) {
+                            CompletableFuture.allOf(batchToJoin.toArray(new CompletableFuture[0])).join();
                         }
                     });
             CompletableFuture.allOf(futures.toArray(new CompletableFuture[0])).join();

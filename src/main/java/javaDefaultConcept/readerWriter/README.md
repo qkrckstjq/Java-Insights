@@ -92,7 +92,7 @@ OutputStreamWriter은 Writer클래스를 직접 상속한 클래스로 문자열
 - OutputStreamWriter클래스 : 쓰기 작업할 할 문자열 데이터를 바이트단위로 인코딩하는 역할
 
 ```java
-OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream("../"), "UTF-8");
+BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("../", true), "UTF-8"));
 ```
 
 **적은 양과 간단한 쓰기 작업에 적합하며 문자열 단위로 작업이 가능하다.**
