@@ -127,7 +127,3 @@ BufferedWriter는 **write() 메소드 사용 시 바로 디스크에 저장하�
 
 **OutputStreamReader 클래스를 직접 상속한 자식 클래스**
 - FileWriter
-
-
-
-

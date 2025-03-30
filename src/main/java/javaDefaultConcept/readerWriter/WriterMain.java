@@ -41,4 +41,12 @@ public class WriterMain {
             throw new RuntimeException(e);
         }
     }
+
+    public static void objectWriting() {
+        try(ObjectOutputStream writer = new ObjectOutputStream(new FileOutputStream(FILE))) {
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

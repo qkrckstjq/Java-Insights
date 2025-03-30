@@ -39,5 +39,20 @@ public class ReaderMain {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
+        try(BufferedReader reader = new BufferedReader(new FileReader(FILE))) {
+            String line = reader.readLine();
+            System.out.println(line);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static void objectReading() {
+        try(ObjectInputStream reader = new ObjectInputStream(new FileInputStream(FILE))) {
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
