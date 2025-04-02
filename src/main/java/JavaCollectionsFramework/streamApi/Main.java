@@ -1,12 +1,17 @@
 package JavaCollectionsFramework.streamApi;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class Main {
     public static void main(String[] args) {
+        ExecutorService service = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
+
+        Set<String> nameSet = new HashSet<>(Set.of("박찬섭", "김잡이", "신쟈는", "신지드"));
+//        nameSet.forEach(System.out::println);
+
+
         List<Person> nameList = new ArrayList<>(List.of(
                 new Person("박찬섭", 25),
                 new Person("김잡이", 22),
@@ -16,15 +21,19 @@ public class Main {
                 new Person("박찬비", 27)
                 ));
 
+        nameList.forEach((person) -> System.out.println(person.getName()));
+        System.out.println("-------------------------------------------");
+        nameList.parallelStream().forEach((person) -> System.out.println(person.getName()));
+
         //25살 이상 "박"으로 시작하는 인물 리스트 사전순으로
         List<Person> normalList = method1(nameList);
         List<Person> streamList = method2(nameList);
 
-        System.out.println("normal-list");
-        printList(normalList);
-
-        System.out.println("stream-list");
-        printList(streamList);
+//        System.out.println("normal-list");
+//        printList(normalList);
+//
+//        System.out.println("stream-list");
+//        printList(streamList);
     }
 
     public static List<Person> method1(List<Person> nameList) {
